@@ -1,0 +1,228 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+   /*background: linear-gradient(135deg, #6a11cb, #be59bb);*/
+   background-image: url("https://www.atce.com.sg/portfolio/awak-technologies/20210828_awak_11/"); /* The image used */
+   height: 700px; /* You must set a specified height */
+   background-position: center; /* Center the image */
+   background-repeat: no-repeat; /* Do not repeat the image */
+   background-size: cover; /* Resize the background image to cover the entire container */
+  }
+
+  /* Black overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Black with 30% opacity */
+    z-index: -1; /* Place behind the content */
+}
+  
+  .container {
+    display: flex;
+    max-width: 1000px;
+    margin: 0px 10px;
+    width: 100%;
+    background-color: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .login-box {
+    flex: 1;
+    padding: 60px;
+  }
+  
+  .login-box h1 {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .login-box p {
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  
+  .login-box a {
+    color: #7f57ff;
+    text-decoration: none;
+  }
+  
+  .input-box {
+    margin-bottom: 15px;
+  }
+  
+
+  .input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+
+  .error {
+    color: red;
+    font-size: 14px;
+    display: none; /* Hidden by default */
+    margin-top: 5px;
+  }  
+
+  .options {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .options label {
+    font-size: 14px;
+  }
+  
+  .options a {
+    color: #7f57ff;
+    text-decoration: none;
+  }
+  
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: #7f57ff;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #6a4fcf;
+  }
+
+  .input-box > button{
+    background: none;
+    width: 9%;
+    margin-top: 8px;
+    font-size: 18px;
+    border: none;
+    border-radius: 17px;
+    cursor: pointer;
+
+  }
+
+  .input-box {
+    position: relative; /* Important for the absolute positioning of the button */
+}
+
+.input-box input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.password-box {
+    position: relative;
+}
+
+.toggle-btn {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: #888;
+}
+
+.toggle-btn:focus {
+    outline: none;
+}
+  .alert {
+    position: fixed;
+    top: 20px; /* Lowered from top to add spacing */
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    max-width: 800px; /* Max width to limit the size */
+    width: 90%; /* Take 90% of the available width */
+    padding: 15px;
+    background-color: #4CAF50; /* Green background for success */
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    display: none; /* Hidden by default */
+    z-index: 1000; /* Ensure it appears on top */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add shadow */
+  }
+  
+  .alert.error {
+    background-color: #f44336; /* Red background for errors */
+  }
+  
+  
+  
+  .social-login {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .social-login button {
+    width: 48%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .google-btn {
+    background-color: white;
+  }
+  
+  .facebook-btn {
+    background-color: white;
+  }
+  
+  .illustration {
+    flex: 1;
+    display: none;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .illustration img {
+    max-width: 100%;
+  }
+  
+  /* Responsive Design */
+  @media (min-width: 768px) {
+    .container {
+      flex-direction: row;
+    }
+    .illustration {
+      display: flex;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .login-box {
+      padding: 20px;
+    }
+  }
